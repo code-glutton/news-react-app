@@ -5,7 +5,7 @@ import search from '../IMG/icons8-search.svg'
 function NavigationBar (){
     return(
         <nav className='navigationContainer'>
-            <div className='header'>
+            <div className='headers'>
                 <h2>Amebo</h2>
             </div>
             <div className='listContainer'>

@@ -1,0 +1,20 @@
+.sectionHead{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 30px;
+    font-size: 14px;
+    padding: 0px 5px;
+}
+
+    .header{
+        font-weight: bold;
+    }
+
+    .hr{
+        flex: 1;
+        height: 1px;
+        margin-top: 15px;
+        background-color: gray;
+        margin-left: 10px;
+    }
