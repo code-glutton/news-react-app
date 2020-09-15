@@ -1,0 +1,15 @@
+.bigPicSEC{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+}
+
+    .bigPic{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .smallComp{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }

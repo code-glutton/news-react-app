@@ -1,0 +1,14 @@
+#smallCompMain{
+    border: solid tomato;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+    .item{
+        flex:0  50%;
+        height: 133.33px;
+        margin-bottom: 5px;
+        border: solid tomato;
+    }
