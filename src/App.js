@@ -1,16 +1,23 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './App.css';
 import NavigationBar from './components/navigation';
-import SectionHeader from './components/sectionHeader';
 import BigPictureSection from "./components/bigPictureSection";
+import SmallImageSection from "./components/smallImageSection";
+
 
 function App() {
+  
   return (
-    <header>
-      <NavigationBar/>
-      <SectionHeader header={"Top News"}/>
-      <BigPictureSection/>
-    </header>
+    <div>
+      <header>
+        <NavigationBar/>
+      </header>
+      <main>
+        <BigPictureSection/>
+        <SmallImageSection/>
+      </main>
+    </div>
+    
   );
 }
 

@@ -8,8 +8,8 @@ function BigPicture(props){
         <div className="photo">
             <Labels color="red" text="Business"/>
             <h3 style={{minHeight:"30px"}}>{props.header}</h3>
-            <div className="headlineImg" style={{minHeight:"340px",border:"solid red"}}>
-                <img src={displayImg} alt="headline image" style={{width:"100%",height:"340px"}}/>
+            <div className="headlineImg" style={{minHeight:"340px"}}>
+                <img src={displayImg} alt="headline" style={{width:"100%",height:"340px"}}/>
             </div>
         </div>
     )

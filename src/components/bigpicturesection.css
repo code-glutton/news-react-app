@@ -1,10 +1,15 @@
+section{
+    padding-top: 30px;
+}
+
+
 .bigPicSEC{
     display: grid;
     grid-template-columns: 49% 49%;
     column-gap: 2%;
 }
-
     .bigPic{
+        grid-row-start: 2;
         grid-column-start: 1;
         grid-column-end: 2;
     }
