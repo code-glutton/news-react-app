@@ -6,10 +6,11 @@ import displayImg from '../IMG/IMG-20190303-WA0082.jpg';
 function BigPicture(props){
     return (
         <div className="photo">
-            <Labels color="red" text="Business"/>
-            <h3 style={{minHeight:"30px"}}>{props.header}</h3>
+            <h3 style={{minHeight:"30px"}}>{props.dataInit.source.name}</h3>
+            <p><em>{props.dataInit.author}</em></p>
+            <p>{props.dataInit.title}</p>
             <div className="headlineImg" style={{minHeight:"340px"}}>
-                <img src={displayImg} alt="headline" style={{width:"100%",height:"340px"}}/>
+                <img src={props.dataInit.urlToImage} alt="headline" style={{width:"100%",height:"340px"}}/>
             </div>
         </div>
     )
