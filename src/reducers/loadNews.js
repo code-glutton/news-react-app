@@ -14,3 +14,10 @@ export function sportNews(state=initialState,action){
     }
     return state;
 }
+
+export function businessNews(state=initialState,action){
+    if(action.type === "news/fetcBusinessNews/fulfilled"){
+        return state.concat(action.payload);
+    }
+    return state;
+}

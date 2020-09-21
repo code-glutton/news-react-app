@@ -14,6 +14,7 @@ function SmallImageSection(){
         <section>
             <SectionHeader className="sectionTitle" header={"Sports"}/>
             <div className="smally">
+            
                 <div className="first">
                 {sportInit.map(data => 
                 <div className="item">
@@ -26,6 +27,7 @@ function SmallImageSection(){
                 </p>
                     </div>)}
                 </div>
+
                 <div className="second">
                 {sportLater.map(data => 
                 <div className="item">

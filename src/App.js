@@ -4,25 +4,26 @@ import './App.css';
 import NavigationBar from './components/navigation';
 import BigPictureSection from "./components/bigPictureSection";
 import SmallImageSection from "./components/smallImageSection";
-import {breakingNewsAction,breakingSportNews} from './actions/loadAllNews';
+import ImgTextSection from "./components/imgTextSection";
+import {breakingNewsAction,breakingSportNews,breakingBusinessNews} from './actions/loadAllNews';
 
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(breakingSportNews());
+    dispatch(breakingBusinessNews());
     dispatch(breakingNewsAction());
   },[])
   
   const pendingSelector = (state) => state.pending;
-  const breakingSelector = (state) => state.breaking
+
 
   const pending = useSelector(pendingSelector);
-  const breaking = useSelector(breakingSelector)
 
 
 
-  if(pending === false){
+  if(pending === true){
     return (
       <div>
     {console.log("yay")}
@@ -30,8 +31,9 @@ function App() {
           <NavigationBar/>
         </header>
         <main>
-          <BigPictureSection/>
-          <SmallImageSection/>
+          {/* <BigPictureSection/>
+          <SmallImageSection/> */}
+          <ImgTextSection/>
         </main>
         </div>
     )
