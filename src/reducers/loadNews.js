@@ -16,8 +16,37 @@ export function sportNews(state=initialState,action){
 }
 
 export function businessNews(state=initialState,action){
-    if(action.type === "news/fetcBusinessNews/fulfilled"){
+    if(action.type === "news/fetchBusinessNews/fulfilled"){
         return state.concat(action.payload);
     }
     return state;
 }
+
+export function entertainmentNews(state=initialState,action){
+    if(action.type === "news/fetchEntertainmentNews/fulfilled"){
+        return state.concat(action.payload);
+    }
+    return state;
+}
+
+export function techNews(state=initialState,action){
+    if(action.type === "news/fetchTechNews/fulfilled"){
+        return state.concat(action.payload);
+    }
+    return state;
+}
+
+export function healthNews(state=initialState,action){
+    if(action.type === "news/fetchHealthNews/fulfilled"){
+        return state.concat(action.payload);
+    }
+    return state;
+}
+
+export function animeNews(state=initialState,action){
+    if(action.type === "news/fetchAnimeNews/fulfilled"){
+        return state.concat(action.payload);
+    }
+    return state;
+}
+

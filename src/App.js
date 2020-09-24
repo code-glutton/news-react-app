@@ -5,7 +5,7 @@ import NavigationBar from './components/navigation';
 import BigPictureSection from "./components/bigPictureSection";
 import SmallImageSection from "./components/smallImageSection";
 import ImgTextSection from "./components/imgTextSection";
-import {breakingNewsAction,breakingSportNews,breakingBusinessNews} from './actions/loadAllNews';
+import {breakingNewsAction,breakingSportNews,breakingHealthNews,breakingBusinessNews,breakingEntertainmentNews,breakingTechNews} from './actions/loadAllNews';
 
 
 function App() {
@@ -13,9 +13,16 @@ function App() {
   useEffect(() => {
     dispatch(breakingSportNews());
     dispatch(breakingBusinessNews());
+    dispatch(breakingEntertainmentNews());
+    dispatch(breakingTechNews());
+    dispatch(breakingHealthNews());
     dispatch(breakingNewsAction());
-  },[])
-  
+  },[]);
+
+  const businessSelectorInit = (state) => state.business.slice(0,4);
+    const businessSelectorLater = (state) => state.business.slice(5,9);
+    const businessInit = useSelector(businessSelectorInit);
+    const businessLater = useSelector(businessSelectorLater);
   const pendingSelector = (state) => state.pending;
 
 
@@ -23,7 +30,7 @@ function App() {
 
 
 
-  if(pending === true){
+  if(pending === false){
     return (
       <div>
     {console.log("yay")}
@@ -31,9 +38,9 @@ function App() {
           <NavigationBar/>
         </header>
         <main>
-          {/* <BigPictureSection/>
-          <SmallImageSection/> */}
-          <ImgTextSection/>
+           <BigPictureSection/>
+          <SmallImageSection/>
+          <ImgTextSection sectionOneData={businessInit} sectionTwoData={businessLater}/>
         </main>
         </div>
     )

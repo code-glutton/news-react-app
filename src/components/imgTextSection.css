@@ -1,8 +1,11 @@
 figure{
-    border: solid brown;
     width: 49%;
 }
 
-div{
-    border: solid salmon;
+
+
+figcaption{
+    height: 100px;
+    overflow: scroll;
+    
 }
