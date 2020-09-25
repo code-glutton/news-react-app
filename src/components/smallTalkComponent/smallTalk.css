@@ -1,0 +1,12 @@
+.smallTalkContainer{
+    width: 100%;
+    border: solid orange;
+    max-height: 150px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+    .smallTalkTitle{
+        margin-bottom: 4px;
+        width: 60%;
+    }
