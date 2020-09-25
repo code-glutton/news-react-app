@@ -1,14 +1,15 @@
 import React,{useEffect,useState} from 'react';
 import SmallTalk from './components/smallTalkComponent/smallTalk';
 import ImgText from './components/imgTextComponent/imgText';
+import HeaderComponent from './components/headerComponents/headerComponent';
 import newsPicture from './IMG/IMG-20190303-WA0082.jpg';
-import {useDispatch,useSelector} from 'react-redux';
+// import {useDispatch,useSelector} from 'react-redux';
 import './App.css';
-import NavigationBar from './components/navigation';
-import BigPictureSection from "./components/bigPictureSection";
-import SmallImageSection from "./components/smallImageSection";
-import ImgTextSection from "./components/imgTextSection";
-import {breakingNewsAction,breakingSportNews,breakingHealthNews,breakingBusinessNews,breakingEntertainmentNews,breakingTechNews,breakingAnimeNews} from './actions/loadAllNews';
+// import NavigationBar from './components/navigation';
+// import BigPictureSection from "./components/bigPictureSection";
+// import SmallImageSection from "./components/smallImageSection";
+// import ImgTextSection from "./components/imgTextSection";
+// import {breakingNewsAction,breakingSportNews,breakingHealthNews,breakingBusinessNews,breakingEntertainmentNews,breakingTechNews,breakingAnimeNews} from './actions/loadAllNews';
 
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
       <h1>loading</h1>
       <SmallTalk source="The punch" newsTitle={mock}/>
       <ImgText source="The punch" newsTitle={mock} img={newsPicture}/>
+      <HeaderComponent title="side"/>
       </div>
   );
   
