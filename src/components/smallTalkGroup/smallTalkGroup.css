@@ -1,0 +1,15 @@
+.smallTalkGroupContainer{
+    width: 100%;
+}
+
+    .smallTalkGroupFlex{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: space-between;
+    }
+
+        .smallTalkGroupFlexItem{
+            flex:0  32.667%;
+            margin-bottom: 4px;
+        }

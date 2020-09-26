@@ -7,7 +7,7 @@ function ImgText({source,newsTitle,img}){
     return(
         <div className="imgTextContainer">
             <div className="imgTextPicture">
-                <img src={img} className="imgTextImg"/>
+                <img alt='news' src={img} className="imgTextImg"/>
             </div>
             <SmallTalk source={source} newsTitle={newsTitle}/>
         </div>

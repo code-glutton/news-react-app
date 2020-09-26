@@ -1,8 +1,6 @@
 import React,{useEffect,useState} from 'react';
-import SmallTalk from './components/smallTalkComponent/smallTalk';
-import ImgText from './components/imgTextComponent/imgText';
-import HeaderComponent from './components/headerComponents/headerComponent';
-import newsPicture from './IMG/IMG-20190303-WA0082.jpg';
+import SmallTalkGroup from './components/smallTalkGroup/SmallTalkGroup';
+import ImgTextGroup from './components/imgTextGroup/imgTextGroup';
 // import {useDispatch,useSelector} from 'react-redux';
 import './App.css';
 // import NavigationBar from './components/navigation';
@@ -51,14 +49,13 @@ function App() {
   //   )
   // }
 
-  const mock ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est tellus, sagittis sit amet augue in, mollis posuere leo. Mauris in consectetur ex. Ut cursus libero turpis, at congue sem tincidunt porta. Praesent vitae nulla sed ante molestie consequat ut eget eros. Vivamus ante lectus, aliquet a enim ut, pulvinar tempus elit. Aliquam vel magna in dui dictum suscipit.";
+
   
     return (
       <div>
       <h1>loading</h1>
-      <SmallTalk source="The punch" newsTitle={mock}/>
-      <ImgText source="The punch" newsTitle={mock} img={newsPicture}/>
-      <HeaderComponent title="side"/>
+      <SmallTalkGroup headerTitle='Sport'/>
+      <ImgTextGroup headerTitle='Business'/>
       </div>
   );
   

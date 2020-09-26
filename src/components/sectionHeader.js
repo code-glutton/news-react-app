@@ -1,11 +1,11 @@
 import React from 'react';
 import "./sectionHeader.css"
 
-function SectionHeader(props){
+function SectionHeader({header}){
     return (
         <div className="sectionHead">
             <div className="header">
-                <p>{props.header}</p>
+                <p>{header}</p>
             </div>
             <div className="hr">
             </div>
