@@ -1,13 +1,24 @@
 import React from 'react';
 import './sideSmallTalk.css';
-import SmallTalk from '../smallTalkComponent/smallTalk'
+import SmallTalk from '../smallTalkComponent/smallTalk';
+import {useHistory} from 'react-router-dom';
 
-function SideSmallTalk(){
+function SideSmallTalk({data,passArticle}){
+    const history = useHistory();
+
+    const onPress = (dataText,dataImg) => {
+        passArticle(dataText,dataImg);
+        history.push('/article');
+    }
+
     return (
         <div className='sideSmallTalkContainer'>
-            <div className='sideSmallTalkFlexItem'>
-                <SmallTalk source='punch' newsTitle='lorem ipsum dolor sit amet tiuldmams kdmasjd  kdas dm.akna kdnamd  dadjkas dasjdnsdnsndm,dnasd jdaskdna dassjda dasjda dajdjajdn adasjkd ad diand dabakn dadnadnad ad aihqeoia,bpofjsbfsf8wnadoa sfalfb sfpoaof affks'/>
+        {data.map(ele => (
+            <div className='sideSmallTalkFlexItem' onClick={() => {onPress(ele.content,ele.urlToImage)}}>
+                <SmallTalk source={ele.source.name} newsTitle={ele.title}/>
             </div>
+        ))}
+           
         </div>
     )
 }

@@ -64,13 +64,13 @@ function Home({articleData}){
 
     return(
         <main>
-            <BigImageGroup/>
+            <BigImageGroup headerTitle='General' collection={data} passArticle={articleData}/>
             <ImgTextGroup headerTitle='Health' collection={data} passArticle={articleData}/>
-            <SmallTalkGroup headerTitle='Sport'/>
+            <SmallTalkGroup headerTitle='Sport' collection={data} passArticle={articleData}/>
             <ImgTextGroup headerTitle='Business' collection={data} passArticle={articleData}/>
-            <SmallTalkGroup headerTitle='Technology'/>
+            <SmallTalkGroup headerTitle='Technology' collection={data} passArticle={articleData}/>
             <ImgTextGroup headerTitle='Anime' collection={data} passArticle={articleData}/>
-            <SmallTalkGroup headerTitle='Entertainment'/>
+            <SmallTalkGroup headerTitle='Entertainment' collection={data} passArticle={articleData}/>
         </main>
     )
 }
