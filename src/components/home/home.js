@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import SmallTalkGroup from '../smallTalkGroup/SmallTalkGroup';
 import ImgTextGroup from '../imgTextGroup/imgTextGroup';
+import BigImageGroup from '../BigImageGroup/bigImageGroup';
 
 function Home({articleData}){
     let state = [
@@ -63,6 +64,7 @@ function Home({articleData}){
 
     return(
         <main>
+            <BigImageGroup/>
             <ImgTextGroup headerTitle='Health' collection={data} passArticle={articleData}/>
             <SmallTalkGroup headerTitle='Sport'/>
             <ImgTextGroup headerTitle='Business' collection={data} passArticle={articleData}/>

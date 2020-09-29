@@ -1,0 +1,16 @@
+.bigImageGroupContainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    column-gap: 1%;
+}
+
+    .bigImageGroupContainerOne{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .bigImageGroupContainerTwo{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }

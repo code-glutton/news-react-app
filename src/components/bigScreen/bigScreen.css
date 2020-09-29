@@ -1,0 +1,10 @@
+.BigScreenContainer{
+    width: 100%;
+    min-height: 500px;
+    border: solid thistle;
+}
+
+    .BigScreenImage{
+        width: 100%;
+        height: 500px;
+    }
