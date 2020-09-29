@@ -1,9 +1,10 @@
 import React,{useEffect,useState} from 'react';
-import SmallTalkGroup from './components/smallTalkGroup/SmallTalkGroup';
-import ImgTextGroup from './components/imgTextGroup/imgTextGroup';
+import Home from './components/home/home';
 // import {useDispatch,useSelector} from 'react-redux';
 import './App.css';
-// import NavigationBar from './components/navigation';
+import NavigationBar from './components/navigation';
+import Article from './components/article/article';
+import {Route} from 'react-router-dom';
 // import BigPictureSection from "./components/bigPictureSection";
 // import SmallImageSection from "./components/smallImageSection";
 // import ImgTextSection from "./components/imgTextSection";
@@ -48,14 +49,20 @@ function App() {
   //       </div>
   //   )
   // }
-
-
+  const [data,setData]=useState(null);
+  const [img,setImg]=useState(null);
+  const setArticle = (data,img) => {
+    setImg(img);
+    setData(data);
+  }
   
     return (
       <div>
-      <h1>loading</h1>
-      <SmallTalkGroup headerTitle='Sport'/>
-      <ImgTextGroup headerTitle='Business'/>
+      <header>
+          <NavigationBar/>
+      </header>
+      <Route exact path='/' render={() => (<Home articleData={setArticle}/>)}/>
+      <Route exact path='/article' render={() => (<Article dataArt={data} imgArt={img}/>)}/>
       </div>
   );
   

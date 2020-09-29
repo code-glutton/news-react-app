@@ -1,0 +1,15 @@
+.articleContainer{
+    padding:15px;
+}
+
+.articleImgDiv{
+    border:solid red;
+    width:100%;
+    height:700px;
+    padding:5px 15px;
+}
+
+    .articleImg{
+        width:100%;
+        height:100%;
+    }
