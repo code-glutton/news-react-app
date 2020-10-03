@@ -11,10 +11,12 @@ function SideSmallTalk({data,passArticle}){
         history.push('/article');
     }
 
+    let count = 0; 
+
     return (
         <div className='sideSmallTalkContainer'>
         {data.map(ele => (
-            <div className='sideSmallTalkFlexItem' onClick={() => {onPress(ele.content,ele.urlToImage)}}>
+            <div className='sideSmallTalkFlexItem' key={count = count+1} onClick={() => {onPress(ele.content,ele.urlToImage)}}>
                 <SmallTalk source={ele.source.name} newsTitle={ele.title}/>
             </div>
         ))}

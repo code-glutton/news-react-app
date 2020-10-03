@@ -29,12 +29,6 @@ export function entertainmentNews(state=initialState,action){
     return state;
 }
 
-export function techNews(state=initialState,action){
-    if(action.type === "news/fetchTechNews/fulfilled"){
-        return state.concat(action.payload);
-    }
-    return state;
-}
 
 export function healthNews(state=initialState,action){
     if(action.type === "news/fetchHealthNews/fulfilled"){
@@ -43,10 +37,4 @@ export function healthNews(state=initialState,action){
     return state;
 }
 
-export function animeNews(state=initialState,action){
-    if(action.type === "news/fetchAnimeNews/fulfilled"){
-        return state.concat(action.payload);
-    }
-    return state;
-}
 

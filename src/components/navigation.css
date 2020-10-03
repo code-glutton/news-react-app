@@ -34,6 +34,11 @@
                 padding-bottom: 11px;
             }
 
+                .linkStyle{
+                    text-decoration: none;
+                    color: white;
+                }
+
     .searchContainer{
         grid-column-start: 3;
         grid-column-end: 4;

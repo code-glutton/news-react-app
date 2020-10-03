@@ -12,12 +12,13 @@ function SmallTalkGroup({headerTitle,collection,passArticle}){
         passArticle(dataText,dataImg);
         history.push('/article');
     }
+    let count = 0; 
     return(
         <section className='smallTalkGroupContainer'>
             <SectionHeader header={headerTitle}/>
             <div className='smallTalkGroupFlex'>
             {collection.map(data => (
-                <div  className='smallTalkGroupFlexItem' onClick={() => {onPress(data.content,data.urlToImage)}}>
+                <div  className='smallTalkGroupFlexItem' key={count = count+1} onClick={() => {onPress(data.content,data.urlToImage)}}>
                     <SmallTalk source={data.source.name} newsTitle={data.title}/>  
                 </div>
             ))}

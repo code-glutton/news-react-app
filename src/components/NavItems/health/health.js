@@ -1,31 +1,10 @@
 import React,{useState} from 'react';
 import {useSelector} from 'react-redux';
-import SmallTalkGroup from '../smallTalkGroup/SmallTalkGroup';
-import ImgTextGroup from '../imgTextGroup/imgTextGroup';
-import BigImageGroup from '../BigImageGroup/bigImageGroup';
+import ImgTextGroup from '../../imgTextGroup/imgTextGroup'
 
-function Home({articleData}){
-    const generalSelect = (state) => state.breaking;
-    const general = useSelector(generalSelect);
-    let generalSelectedItems =  general.slice(0,7);
-
-    const sportsSelect = (state) => state.sports;
-    const sportsPull = useSelector(sportsSelect);
-    let sports = sportsPull.slice(0,6);
-
+function Health({articleData}){
     const healthSelect = (state) => state.health;
     const healthPull = useSelector(healthSelect);
-    let health = healthPull.slice(0,4);
-
-    const businessSelect = (state) => state.business;
-    const businessPull = useSelector(businessSelect);
-    let business =businessPull.slice(0,4);
-    
-    const entertainmentSelect = (state) => state.entertainment;
-    const entertainmentPull = useSelector(entertainmentSelect);
-    let entertainment = entertainmentPull.slice(0,6);
-
-
     let state = [
         {
             "source": {
@@ -78,34 +57,17 @@ function Home({articleData}){
             "urlToImage": "http://outbreaknewstoday.com/wp-content/uploads/2020/09/china-1356803_640.jpg",
             "publishedAt": "2020-09-28T00:31:17Z",
             "content": "By NewsDesk  @infectiousdiseasenews\r\nLocal authorities in Southwest China’s Yunnan Province are reporting a suspected case of bubonic plague, according to a Global Times report.\r\nImage/dinky123uk\r\nTh… [+1247 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Outbreak News Today"
-            },
-            "author": null,
-            "title": "China: Suspect bubonic plague case reported in Yunnan Province - Outbreak News Today",
-            "description": "By NewsDesk  @infectiousdiseasenews Local authorities in Southwest China’s Yunnan Province are reporting a suspected case of bubonic plague, according to a Global Times report. The patient is a 3-year-old child in Menghai county, who is currently in a stable …",
-            "url": "http://outbreaknewstoday.com/china-suspect-bubonic-plague-case-reported-in-yunnan-province-99550/",
-            "urlToImage": "http://outbreaknewstoday.com/wp-content/uploads/2020/09/china-1356803_640.jpg",
-            "publishedAt": "2020-09-28T00:31:17Z",
-            "content": "By NewsDesk  @infectiousdiseasenews\r\nLocal authorities in Southwest China’s Yunnan Province are reporting a suspected case of bubonic plague, according to a Global Times report.\r\nImage/dinky123uk\r\nTh… [+1247 chars]"
         }
     ]
 
 
     const [data,setData] = useState(state);
 
-    return(
+    return (
         <main>
-            <BigImageGroup headerTitle='General' collection={generalSelectedItems} passArticle={articleData}/>
-            <ImgTextGroup headerTitle='Health' collection={health} passArticle={articleData}/>
-            <SmallTalkGroup headerTitle='Sport' collection={sports} passArticle={articleData}/>
-            <ImgTextGroup headerTitle='Business' collection={business} passArticle={articleData}/>
-            <SmallTalkGroup headerTitle='Entertainment' collection={entertainment} passArticle={articleData}/>
+            <ImgTextGroup headerTitle='Health' collection = {healthPull} passArticle={articleData}/>
         </main>
     )
 }
 
-export default Home;
+export default Health;

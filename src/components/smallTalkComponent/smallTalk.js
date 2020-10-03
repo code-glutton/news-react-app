@@ -7,7 +7,7 @@ function SmallTalk({source,newsTitle}){
     const ResponsiveEllipsis = responsiveHOC()(LinesEllipsis)
     return (
         <div className="smallTalkContainer">
-            <p className="smallTalkTitle">
+            <div className="smallTalkTitle">
                 <strong>
                     <ResponsiveEllipsis
                         text={newsTitle}
@@ -15,7 +15,7 @@ function SmallTalk({source,newsTitle}){
                         ellipsis='...'
                         trimRight
                         basedOn='letters'/>
-                </strong></p>
+                </strong></div>
             <p className="smallTalkSource"><em>{source}</em></p>
         </div>
     )

@@ -24,23 +24,12 @@ export const breakingEntertainmentNews = createAsyncThunk('news/fetchEntertainme
     return data.articles;
 })
 
-export const breakingTechNews = createAsyncThunk('news/fetchTechNews', async () => {
-    const response =await fetch('https://newsapi.org/v2/top-headlines?apiKey=76f03b163f6f4f48a1ca5cfd28eefd77&country=ng&category=technology');
-    const data = await response.json();
-    return data.articles;
-})
-
 export const breakingHealthNews = createAsyncThunk('news/fetchHealthNews', async () => {
     const response =await fetch('https://newsapi.org/v2/top-headlines?apiKey=76f03b163f6f4f48a1ca5cfd28eefd77&country=ng&category=health');
     const data = await response.json();
     return data.articles;
 })
 
-export const breakingAnimeNews = createAsyncThunk('news/fetchAnimeNews', async () => {
-    const response =await fetch('https://newsapi.org/v2/everything?q=anime&apiKey=76f03b163f6f4f48a1ca5cfd28eefd77');
-    const data = await response.json();
-    return data.articles;
-})
 
 
 
