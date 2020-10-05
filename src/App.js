@@ -10,7 +10,7 @@ import './App.css';
 import NavigationBar from './components/navigation';
 import Article from './components/article/article';
 import {Route} from 'react-router-dom';
-import {breakingNewsAction,breakingSportNews,breakingHealthNews,breakingBusinessNews,breakingEntertainmentNews} from './actions/loadAllNews';
+import {breakingNewsAction,breakingPoliticsNews,breakingSportNews,breakingHealthNews,breakingBusinessNews,breakingEntertainmentNews} from './actions/loadAllNews';
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
     dispatch(breakingBusinessNews());
     dispatch(breakingEntertainmentNews());
     dispatch(breakingHealthNews());
+    dispatch(breakingPoliticsNews());
     dispatch(breakingNewsAction());
   },[]);
 

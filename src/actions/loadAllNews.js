@@ -6,6 +6,12 @@ export const breakingNewsAction = createAsyncThunk('news/fetchBreakingNews', asy
     return data.articles;
 });
 
+export const breakingPoliticsNews = createAsyncThunk('news/fetchPoliticsNews', async () => {
+    const response =await fetch('https://newsapi.org/v2/top-headlines?apiKey=76f03b163f6f4f48a1ca5cfd28eefd77&country=ng&category=politics');
+    const data = await response.json();
+    return data.articles;
+});
+
 export const breakingSportNews = createAsyncThunk('news/fetchSportNews', async () => {
     const response =await fetch('https://newsapi.org/v2/top-headlines?apiKey=76f03b163f6f4f48a1ca5cfd28eefd77&country=ng&category=sports');
     const data = await response.json();

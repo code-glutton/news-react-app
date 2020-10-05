@@ -37,4 +37,11 @@ export function healthNews(state=initialState,action){
     return state;
 }
 
+export function politicsNews(state=initialState,action){
+    if(action.type === "news/fetchPoliticsNews/fulfilled"){
+        return state.concat(action.payload);
+    }
+    return state;
+}
+
 

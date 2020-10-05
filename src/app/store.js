@@ -1,5 +1,5 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {breakingNews, sportNews,businessNews,entertainmentNews,healthNews} from '../reducers/loadNews';
+import {breakingNews, sportNews,businessNews,entertainmentNews,politicsNews,healthNews} from '../reducers/loadNews';
 
 import loader from "../reducers/loader"
 
@@ -10,6 +10,7 @@ export default configureStore({
         business:businessNews,
         entertainment:entertainmentNews,
         health:healthNews,
+        politics:politicsNews,
         pending:loader
     }
 })
