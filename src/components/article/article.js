@@ -1,5 +1,4 @@
-import React from 'react';
-import img from '../../IMG/IMG-20190303-WA0082.jpg';
+import React from 'react'
 import './article.css'
 
 function Article({dataArt,imgArt}){
