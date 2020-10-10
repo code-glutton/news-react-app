@@ -1,0 +1,9 @@
+.footerContainer{
+    background-color: black;
+    text-align: center;
+}
+
+    .footerPara{
+        color: white;
+        font-weight: bold;
+    }

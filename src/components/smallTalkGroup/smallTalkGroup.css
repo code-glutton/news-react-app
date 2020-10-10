@@ -13,3 +13,16 @@
             flex:0  32.667%;
             margin-bottom: 4px;
         }
+
+        @media only screen and (max-width: 768px){
+            .smallTalkGroupFlex{
+                display: grid;
+                grid-template-columns:100%;
+                width: 100%;
+            }
+
+            .smallTalkGroupFlexItem{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+        }

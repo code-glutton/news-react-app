@@ -11,6 +11,7 @@ import NavigationBar from './components/navigation';
 import Article from './components/article/article';
 import {Route} from 'react-router-dom';
 import {breakingNewsAction,breakingPoliticsNews,breakingSportNews,breakingHealthNews,breakingBusinessNews,breakingEntertainmentNews} from './actions/loadAllNews';
+import Footer from './components/footer/footer';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
       <Route exact path='/entertainment' render={() => (<Entertainment articleData={setArticle}/>)}/>
       <Route exact path='/business' render={() => (<Business articleData={setArticle}/>)}/>
       <Route exact path='/health' render={() => (<Health articleData={setArticle}/>)}/>
+      <Footer/>
       </div>
   );
   }
